@@ -31,20 +31,16 @@ def main():
   #initialize array with max integer , pos 0 is the base case value is 0
   max = sys.maxsize
   memList = [max] * (changeToGive + 1)
-  #print(memList)
-  #print(len(memList))
+
 
   memList[0] = 0
   
   
   for i in range(1,len(memList)):
     for j in coins:
-      #ugly debug tools, i developed in repl.it
-      #print(j)
-      #print(i)
-
+    
       if i - j >= 0:
-        #print('entro al if')
+        #print('if')
         memList[i] = min(memList[i],memList[i-j]+1)
         #print(memList[i])
 
